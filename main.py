@@ -58,9 +58,10 @@ while True:
         media = soma / len(historico)
 
         print(f"\nConsumo médio: {media:.2f} km/L")
-    if op == "4":
+    
+    elif op == "4":
         print("Encerrando programa...")
         break
 
     else:
-        print("Opção inválida")
+        print("Digite uma opção válida!")
