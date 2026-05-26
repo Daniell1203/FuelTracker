@@ -15,15 +15,30 @@ while True:
         litros = float(input("Litros abastecidos: "))
         valor = float(input("Valor pago: "))
 
-    dados = {
-        "km": km,
-        "litros": litros,
-        "valor": valor
-    }
+        dados = {
+            "km": km,
+            "litros": litros,
+            "valor": valor
+        }
 
-    historico.append(dados)
+        historico.append(dados)
 
-    print("Abastecimento registrado!")
+        print("Abastecimento registrado!")
+
+    elif op == "2":
+
+        if len(historico) == 0:
+            print("Nenhum abastecimento registrado.")
+
+        else:
+
+            print("\n===== HISTÓRICO =====")
+
+        for item in historico:
+
+            print(f"\nKm rodados: {item['km']}")
+            print(f"Litros: {item['litros']}")
+            print(f"Valor pago: R${item['valor']}")
     if op == "4":
         print("Encerrando programa...")
         break
