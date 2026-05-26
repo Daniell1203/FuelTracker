@@ -1,4 +1,5 @@
 historico = []
+
 while True:
 
     print("\n===== FUEL TRACKER =====")
@@ -8,6 +9,7 @@ while True:
     print("4 - Sair")
 
     op = input("Escolha uma opção: ")
+
 
     if op == "1":
 
@@ -25,6 +27,7 @@ while True:
 
         print("Abastecimento registrado!")
 
+
     elif op == "2":
 
         if len(historico) == 0:
@@ -34,34 +37,38 @@ while True:
 
             print("\n===== HISTÓRICO =====")
 
-        for item in historico:
+            for item in historico:
 
-            print(f"\nKm rodados: {item['km']}")
-            print(f"Litros: {item['litros']}")
-            print(f"Valor pago: R${item['valor']}")
+                print(f"\nKm rodados: {item['km']} km")
+                print(f"Litros abastecidos: {item['litros']} L")
+                print(f"Valor pago: R${item['valor']}")
+
+
 
     elif op == "3":
 
         if len(historico) == 0:
-         print("Sem dados.")
+            print("Sem dados registrados.")
 
         else:
 
             soma = 0
 
-        for item in historico:
+            for item in historico:
 
-            consumo = item["km"] / item["litros"]
+                consumo = item["km"] / item["litros"]
 
-            soma += consumo
+                soma += consumo
 
-        media = soma / len(historico)
+            media = soma / len(historico)
 
-        print(f"\nConsumo médio: {media:.2f} km/L")
-    
+            print(f"\nConsumo médio: {media:.2f} km/L")
+
     elif op == "4":
+
         print("Encerrando programa...")
         break
+
 
     else:
         print("Digite uma opção válida!")
