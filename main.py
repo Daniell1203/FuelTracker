@@ -39,6 +39,25 @@ while True:
             print(f"\nKm rodados: {item['km']}")
             print(f"Litros: {item['litros']}")
             print(f"Valor pago: R${item['valor']}")
+
+    elif op == "3":
+
+        if len(historico) == 0:
+         print("Sem dados.")
+
+        else:
+
+            soma = 0
+
+        for item in historico:
+
+            consumo = item["km"] / item["litros"]
+
+            soma += consumo
+
+        media = soma / len(historico)
+
+        print(f"\nConsumo médio: {media:.2f} km/L")
     if op == "4":
         print("Encerrando programa...")
         break
