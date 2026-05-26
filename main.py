@@ -1,3 +1,4 @@
+historico = []
 while True:
 
     print("\n===== FUEL TRACKER =====")
@@ -8,6 +9,21 @@ while True:
 
     op = input("Escolha uma opção: ")
 
+    if op == "1":
+
+        km = float(input("Km rodados: "))
+        litros = float(input("Litros abastecidos: "))
+        valor = float(input("Valor pago: "))
+
+    dados = {
+        "km": km,
+        "litros": litros,
+        "valor": valor
+    }
+
+    historico.append(dados)
+
+    print("Abastecimento registrado!")
     if op == "4":
         print("Encerrando programa...")
         break
