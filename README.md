@@ -12,7 +12,6 @@ Projeto simples em Python para controle de abastecimento e consumo de combustív
 ## Tecnologias
 
 - Python 3
-
 ## Melhorias futuras
 
 - Salvar dados em JSON
